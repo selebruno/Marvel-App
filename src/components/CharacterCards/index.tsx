@@ -33,7 +33,7 @@ const CardsContainer = styled.div`
     grid-template-columns: repeat(2, 2fr);
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     grid-template-columns: 2fr;
   }
 `;

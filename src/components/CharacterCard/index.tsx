@@ -26,6 +26,10 @@ const CharacterContainer = styled.div`
     transform: translateY(0);
     height: 100%;
   }
+  @media (max-width: 450px) {
+    width: 230px;
+    min-height: 18rem;
+  }
 `;
 
 const CornerTriangle = styled.div`
@@ -87,6 +91,10 @@ const SmallLikedIcon = styled(LikedIcon)`
 const Image = styled.img`
   max-height: 12rem;
   min-height: 11rem;
+  @media (max-width: 450px) {
+    max-height: 14rem;
+    min-height: 13rem;
+  }
 `;
 
 export default function CharacterCard({ character }: CharacterCardProps) {
