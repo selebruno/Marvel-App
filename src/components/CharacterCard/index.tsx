@@ -4,8 +4,8 @@ import LikedIcon from "../../assets/images/filled-heart.svg";
 import { useCharacters } from "../../contexts/CharactersContext";
 import { useNavigate } from "react-router-dom";
 import { PATH_CHARACTER_DETAIL } from "../../constants/routes";
-//@ts-ignore
-import { subst } from "urlcat"; // library seems to be working on an update for this
+//@ts-expect-error library seems to be working on an update for this
+import { subst } from "urlcat";
 
 interface CharacterCardProps {
   character: Character;

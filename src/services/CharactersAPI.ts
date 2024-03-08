@@ -19,7 +19,7 @@ class CharactersAPI {
     return md5(hashInput);
   };
 
-private buildUrl = (endpoint: string, params: Record<string, any>): string => {
+private buildUrl = (endpoint: string, params: Record<string, unknown>): string => {
   const ts = Date.now();
   const hash = this.generateHash(ts);
 
