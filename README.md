@@ -85,6 +85,11 @@ A Marvel api key can be requested in the following link: [https://developer.marv
 
 Replace `your_marvel_public_key` and `your_marvel_private_key` with your Marvel API keys.
 
+## Production Version
+
+A live version of the Marvel App is available in production. You can explore it by visiting [Marvel App Production](https://marvel-app-self.vercel.app/).
+
+
 ## Technologies Used
 
 - React
