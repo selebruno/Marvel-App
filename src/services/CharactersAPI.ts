@@ -63,7 +63,8 @@ private buildUrl = (endpoint: string, params: Record<string, unknown>): string =
   };
 
     public getComic = (comicUri: string): Promise<AxiosResponse<ComicDataWrapper>> => {
-    const url = this.buildUrl(`${comicUri}`, {
+    const secureApiUrl = comicUri.replace(/^http:/, 'https:')  
+    const url = this.buildUrl(`${secureApiUrl}`, {
     });
 
     const headers = {
