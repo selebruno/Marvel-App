@@ -1,30 +1,100 @@
-# React + TypeScript + Vite
+# Marvel App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Marvel App is a web application built with React and Vite, allowing users to explore Marvel characters, view details, and manage their favorite characters.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Running the Application](#running-the-application)
+- [Build and Deployment](#build-and-deployment)
+- [Linting](#linting)
+- [Environment Variables](#environment-variables)
+- [Technologies Used](#technologies-used)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+Before running the application, ensure you have Node.js and npm installed on your machine.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+# Clone the repository
+git clone https://github.com/selebruno/Marvel-app.git
+
+# Change to the project directory
+cd Marvel-app
+
+# Install dependencies
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Project Structure
+
+The project follows a modular structure for better organization:
+
+- `src`: Source code directory
+  - `assets`: Contains static assets such as images and SVGs
+  - `components`: Reusable React components
+  - `constants`: Application constants and configuration
+  - `contexts`: React context providers
+  - `layout`: Layout components for structuring the app's UI
+  - `pages`: Individual pages or views of the application
+  - `router`: Application routing setup
+  - `services`: Services for handling data fetching and business logic
+  - `types`: TypeScript type definitions
+
+## Running the Application
+
+To run the application in development mode:
+
+```bash
+npm run dev
+```
+
+This will start the development server, and you can access the application at [http://localhost:5173](http://localhost:5173).
+
+## Build and Deployment
+
+To build the application for production:
+
+```bash
+npm run build
+```
+
+This command generates an optimized production build in the `dist` directory.
+
+## Linting
+
+Linting is set up using ESLint and Prettier. To lint the code:
+
+```bash
+npm run lint
+```
+
+## Environment Variables
+
+The application uses the `dotenv` package to manage environment variables. Create a `.env` file at the root of the project with the following variables:
+
+```env
+VITE_MARVEL_PUBLIC_KEY=your_marvel_public_key
+VITE_MARVEL_PRIVATE_KEY=your_marvel_private_key
+```
+
+A Marvel api key can be requested in the following link: [https://developer.marvel.com/account](https://developer.marvel.com/account).
+
+Replace `your_marvel_public_key` and `your_marvel_private_key` with your Marvel API keys.
+
+## Technologies Used
+
+- React
+- Vite
+- Styled Components
+- React Router
+- React Query
+- Axios
+- TypeScript
+- ESLint
+- Prettier
+
+Feel free to explore and enhance the application as needed! If you have any questions or issues, please refer to the documentation of the respective libraries or contact the project maintainers.
