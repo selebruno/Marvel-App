@@ -139,7 +139,7 @@ export default function CharacterDetail() {
         )}
       </DetailContainer>
       <ComicsContainer>
-        <h1>COMICS</h1>
+        {character?.comics?.items && character.comics.items.length > 0 && <h1>COMICS</h1>}
         <Comics>
           {character?.comics?.items?.map((comic) => {
             return comic.resourceURI && <ComicItem key={comic.name} comicId={comic.resourceURI} />;
